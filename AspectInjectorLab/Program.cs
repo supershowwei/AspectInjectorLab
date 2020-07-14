@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace AspectInjectorLab
 {
-    [Loggable]
+    [Logging]
     public class TargetService
     {
         public int Add(int a, int b)
