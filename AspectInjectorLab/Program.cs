@@ -10,13 +10,20 @@ namespace AspectInjectorLab
         {
             return a + b;
         }
+
+        public async Task<int> AddAsync(int a, int b)
+        {
+            await Task.Delay(1);
+
+            return a + b;
+        }
     }
 
     internal class Program
     {
-        private static void Main(string[] args)
+        private static async Task Main(string[] args)
         {
-            var result = new TargetService().Add(1, 2);
+            var result = await new TargetService().AddAsync(1, 2);
 
             Console.ReadKey();
         }

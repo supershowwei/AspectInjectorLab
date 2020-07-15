@@ -119,9 +119,37 @@ namespace AspectInjectorLab
         }
     }
 
+    //[Aspect(Scope.Global)]
+    //[Injection(typeof(LoggingAspectAttribute))]
     [Injection(typeof(LoggingAspect))]
     [Injection(typeof(MeasurementAspect))]
     public class LoggingAttribute : Attribute
     {
+        //[Advice(Kind.Before, Targets = Target.Method)]
+        //public void Before([Argument(Source.Name)] string name, [Argument(Source.Arguments)] object[] arguments)
+        //{
+        //    Console.WriteLine("On Before");
+        //}
+
+        //[Advice(Kind.After, Targets = Target.Method)]
+        //public void After([Argument(Source.Name)] string name, [Argument(Source.Arguments)] object[] arguments, [Argument(Source.ReturnValue)] object returnValue)
+        //{
+        //    Console.WriteLine("On After");
+        //}
+
+        //[Advice(Kind.Around, Targets = Target.Method)]
+        //public object Around(
+        //    [Argument(Source.Name)] string name,
+        //    [Argument(Source.Arguments)] object[] arguments,
+        //    [Argument(Source.Target)] Func<object[], object> target)
+        //{
+        //    Console.WriteLine("On Around Before");
+
+        //    var result = target(arguments);
+
+        //    Console.WriteLine("On Around After");
+
+        //    return result;
+        //}
     }
 }
